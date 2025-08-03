@@ -80,6 +80,7 @@ class QuizbowlGame:
     def buzz(self, team, answer, buzz_time='normal', attempted_teams=None):
         tossup = self.tossups[self.tossup_index]
         correct = self.check_answer(answer, tossup['answer_sanitized'])
+        is_first_attempt = attempted_teams is not None and len(attempted_teams) == 1
         if correct:
             points = 15 if buzz_time == 'power' else 10
             self.scores[team] += points
@@ -89,7 +90,8 @@ class QuizbowlGame:
             self.ask_bonus()
             return "correct"
         else:
-            if buzz_time == 'interrupt':
+            # Penalize for both 'power' and 'interrupt' if first attempt
+            if buzz_time in ('power', 'interrupt') and is_first_attempt:
                 self.scores[team] -= 5
                 print(f"{team} interrupted incorrectly! -5 points.")
             print(f"{team} answered incorrectly.")
