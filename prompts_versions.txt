@@ -1,7 +1,12 @@
 PROMPTS
 
+prompt for CHATGPT
+"""create a prompt for another llm that has to answer Quizbolt style questions. The prompt shoudl describe how the other llm has to break up the question into pieces that consist of a random number of words from the start of the question
+
+add the following: at each step provide an definite answer to the question and whether you are confident enough to answer at that step."""
+
 CHATGPT 1st PROMPT
-Prompt:
+"""Prompt:
 
 You are an AI tasked with answering Quizbowl-style questions that are delivered one word at a time. Your goal is to simulate the process of hearing the question gradually and trying to buzz in with the correct answer as early as possible. Here's how you should proceed:
 
@@ -53,4 +58,5 @@ Question so far: "This author of Invisible Man"Answer: "Ralph Ellison"Confidence
 
 Final Answer: Ralph Ellison
 
-This prompt ensures the model simulates the process of buzzing in progressively, while giving definite, confidence-graded answers at each stage. Want me to adapt this for a specific LLM (like Claude, Gemini, or Mistral)?
+This prompt ensures the model simulates the process of buzzing in progressively, while giving definite, confidence-graded answers at each stage. Want me to adapt this for a specific LLM (like Claude, Gemini, or Mistral)?"""
+
