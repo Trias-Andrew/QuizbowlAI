@@ -13,17 +13,18 @@ class QuizbowlGame:
         self.read_speed = read_speed  # seconds per word
         self.client = ollama.Client()
 
+    # ...existing code...
+
     def read_tossup(self):
         tossup = self.tossups[self.tossup_index]
         words = tossup['question_sanitized'].split()
         print(f"Tossup {tossup['number']}:")
         buzzed = False
+        attempted_teams = set()
         for idx, word in enumerate(words):
             print(word, end=' ', flush=True)
             start = time.time()
-            # Wait for read_speed seconds or until Enter is pressed
             while time.time() - start < self.read_speed:
-                # Non-blocking buzz check
                 if self.check_for_buzz():
                     buzzed = True
                     break
@@ -31,20 +32,51 @@ class QuizbowlGame:
             if buzzed:
                 print("\nBuzz detected!")
                 team = input("Which team buzzed? (TeamA/TeamB): ").strip()
+                if team not in self.scores or team in attempted_teams:
+                    print("Invalid or duplicate buzz. Ignoring.")
+                    buzzed = False
+                    continue
                 answer = input(f"{team}, your answer: ")
                 buzz_time = 'power' if idx < len(words) // 2 else 'interrupt'
-                self.buzz(team, answer, buzz_time=buzz_time)
-                return
+                attempted_teams.add(team)
+                result = self.buzz(team, answer, buzz_time=buzz_time, attempted_teams=attempted_teams)
+                if result == "correct":
+                    return
+                elif result == "incorrect" and len(attempted_teams) < 2:
+                    # Offer other team a chance
+                    other_team = 'TeamB' if team == 'TeamA' else 'TeamA'
+                    other_try = input(f"{other_team}, do you want to buzz? (y/n): ").strip().lower()
+                    if other_try == 'y':
+                        other_answer = input(f"{other_team}, your answer: ")
+                        attempted_teams.add(other_team)
+                        result = self.buzz(other_team, other_answer, buzz_time='normal', attempted_teams=attempted_teams)
+                        if result == "correct":
+                            return
+                    print(f"Both teams missed. The correct answer was: {tossup['answer_sanitized']}")
+                    self.tossup_index += 1
+                    return
+                else:
+                    print(f"Both teams missed. The correct answer was: {tossup['answer_sanitized']}")
+                    self.tossup_index += 1
+                    return
         print()  # Newline after question
-        # After reading, allow buzz from either team
-        team = input("Anyone want to buzz? (TeamA/TeamB or Enter to skip): ").strip()
-        if team in self.scores:
-            answer = input(f"{team}, your answer: ")
-            self.buzz(team, answer, buzz_time='normal')
-        else:
-            print("No buzz. Moving to next tossup.")
-            self.tossup_index += 1
-
+        # After reading, allow buzz from either team if not already attempted
+        for team in self.scores:
+            if team not in attempted_teams:
+                try_buzz = input(f"{team}, do you want to buzz? (y/n): ").strip().lower()
+                if try_buzz == 'y':
+                    answer = input(f"{team}, your answer: ")
+                    attempted_teams.add(team)
+                    result = self.buzz(team, answer, buzz_time='normal', attempted_teams=attempted_teams)
+                    if result == "correct":
+                        return
+        # If less than both teams have attempted, wait 3 seconds then reveal answer
+        if len(attempted_teams) < 2:
+            print("No more buzzes. Revealing answer in 3 seconds...")
+            time.sleep(3)
+            print(f"The correct answer was: {tossup['answer_sanitized']}")
+        self.tossup_index += 1
+    
     def check_for_buzz(self):
         # Check if Enter is pressed (simulate buzz)
         import sys
@@ -54,7 +86,7 @@ class QuizbowlGame:
             return True
         return False
 
-    def buzz(self, team, answer, buzz_time='normal'):
+    def buzz(self, team, answer, buzz_time='normal', attempted_teams=None):
         tossup = self.tossups[self.tossup_index]
         correct = self.check_answer(answer, tossup['answer_sanitized'])
         if correct:
@@ -64,18 +96,13 @@ class QuizbowlGame:
             print(f"{team} answered correctly! +{points} points.")
             self.tossup_index += 1
             self.ask_bonus()
+            return "correct"
         else:
             if buzz_time == 'interrupt':
                 self.scores[team] -= 5
                 print(f"{team} interrupted incorrectly! -5 points.")
             print(f"{team} answered incorrectly.")
-            # Allow other team to buzz after incorrect interrupt
-            other_team = 'TeamB' if team == 'TeamA' else 'TeamA'
-            answer = input(f"{other_team}, your answer (or Enter to skip): ")
-            if answer.strip():
-                self.buzz(other_team, answer, buzz_time='normal')
-            else:
-                self.tossup_index += 1
+            return "incorrect"
 
     def ask_bonus(self):
         bonus = self.bonuses[self.bonus_index]
