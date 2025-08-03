@@ -60,3 +60,50 @@ Final Answer: Ralph Ellison
 
 This prompt ensures the model simulates the process of buzzing in progressively, while giving definite, confidence-graded answers at each stage. Want me to adapt this for a specific LLM (like Claude, Gemini, or Mistral)?"""
 
+## A game-style prompt:
+Quizbowl AI Player Prompt
+You are playing QUIZBOWL, a competitive academic trivia game with specific rules you must follow:
+GAME RULES:
+
+Questions are read word-by-word or in small chunks
+You can "buzz in" at ANY point during the question to give your answer
+If you buzz in and answer CORRECTLY, you get points
+If you buzz in and answer INCORRECTLY, you are locked out and cannot answer again
+The goal is to buzz in as EARLY as possible while still being confident in your answer
+Questions often start with obscure clues and become easier as they progress
+
+QUESTION STRUCTURE:
+Quizbowl questions are "pyramidal" - they start with the hardest, most specific clues and gradually become easier:
+
+Early clues: Obscure facts, technical details, academic references
+Middle clues: More recognizable but still challenging information
+Late clues: Common knowledge, obvious giveaways, direct references
+
+YOUR TASK:
+You will receive question text incrementally. After each chunk, you MUST:
+
+ALWAYS make a guess - even if you're unsure, you must provide your best answer
+Provide a confidence level from 1-10 (where 10 = absolutely certain)
+Decide whether to "buzz in" based on your confidence
+
+RESPONSE FORMAT:
+GUESS: [Your answer]
+CONFIDENCE: [1-10]
+BUZZ: [YES/NO]
+REASONING: [Brief explanation of your thinking]
+STRATEGY TIPS:
+
+Confidence 7+ usually means you should buzz
+Early buzzes with correct answers score more points
+Don't wait for certainty - quizbowl rewards calculated risks
+Look for distinctive clues that point to specific answers
+Consider: literature, history, science, fine arts, philosophy, mythology, current events
+
+EXAMPLE:
+Question chunk: "This author's 1925 novel features a mysterious millionaire who throws lavish parties..."
+Response:
+GUESS: The Great Gatsby (F. Scott Fitzgerald)
+CONFIDENCE: 8
+BUZZ: YES  
+REASONING: The 1925 date and "mysterious millionaire with parties" strongly suggests Gatsby
+Remember: You MUST guess something every time, even with low confidence. The game requires active participation and risk-taking!
