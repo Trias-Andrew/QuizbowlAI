@@ -17,58 +17,53 @@ class QuizbowlGame:
         tossup = self.tossups[self.tossup_index]
         words = tossup['question_sanitized'].split()
         print(f"Tossup {tossup['number']}:")
-        buzzed = False
         attempted_teams = set()
         idx = 0
-        while idx < len(words):
-            print(words[idx], end=' ', flush=True)
+        reading_done = False
+        final_window_start = None
+
+        while True:
+            # Print next word if still reading
+            if not reading_done and idx < len(words):
+                print(words[idx], end=' ', flush=True)
+                idx += 1
+                wait_time = self.read_speed
+            elif not reading_done:
+                print()  # Newline after question
+                print("Final chance to buzz! You have 3 seconds...")
+                reading_done = True
+                final_window_start = time.time()
+                wait_time = 3
+            else:
+                wait_time = max(0, 3 - (time.time() - final_window_start))
+
             start = time.time()
-            # Wait for read_speed seconds or until Enter is pressed
-            while time.time() - start < self.read_speed:
-                # Non-blocking buzz check
+            buzzed = False
+            while time.time() - start < wait_time:
                 if self.check_for_buzz():
                     buzzed = True
                     break
                 time.sleep(0.05)
+
             if buzzed:
                 print("\nBuzz detected!")
                 team = input("Which team buzzed? (TeamA/TeamB): ").strip()
                 if team not in self.scores or team in attempted_teams:
                     print("Invalid or duplicate buzz. Ignoring.")
-                    buzzed = False
                     continue
                 answer = input(f"{team}, your answer: ")
-                buzz_time = 'power' if idx < len(words) // 2 else 'interrupt'
+                buzz_time = 'power' if not reading_done and idx < len(words) // 2 else ('interrupt' if not reading_done else 'normal')
                 attempted_teams.add(team)
                 result = self.buzz(team, answer, buzz_time=buzz_time, attempted_teams=attempted_teams)
                 if result == "correct":
                     return
-                elif attempted_teams == {'TeamA', 'TeamB'}:
+                if len(attempted_teams) == 2:
                     print("Both teams have buzzed. No more buzzes allowed for this tossup.")
                     break
-                buzzed = False
-            idx += 1
-        print()  # Newline after question
 
-        # 3-second window for final buzzes after question ends
-        print("Final chance to buzz! You have 3 seconds...")
-        end_time = time.time() + 3
-        while time.time() < end_time:
-            if self.check_for_buzz():
-                print("\nBuzz detected!")
-                team = input("Which team buzzed? (TeamA/TeamB): ").strip()
-                if team not in self.scores or team in attempted_teams:
-                    print("Invalid or duplicate buzz. Ignoring.")
-                    continue
-                answer = input(f"{team}, your answer: ")
-                attempted_teams.add(team)
-                result = self.buzz(team, answer, buzz_time='normal', attempted_teams=attempted_teams)
-                if result == "correct":
-                    return
-                elif attempted_teams == {'TeamA', 'TeamB'}:
-                    print("Both teams have buzzed. No more buzzes allowed for this tossup.")
-                    break
-            time.sleep(0.05)
+            # Exit after final window
+            if reading_done and (time.time() - final_window_start >= 3 or len(attempted_teams) == 2):
+                break
 
         print(f"No more buzzes. The correct answer was: {tossup['answer_sanitized']}")
         self.tossup_index += 1
