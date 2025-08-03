@@ -7,7 +7,7 @@ an easier Quizbowl AI opponent for broader audience (nerfed).
 3) prompts for LLM to follow
 4) terminal app that reads csv, prints out question, allows buzzing of either LLM or person
 
-# Alternate Structure (simpler)
+#Alternate Structure (simpler)
 - everything the same except that the LLM would be prompted to answer the question as a selected persone (eg:middle schooler)
 - not sure if this would facilitate the question streaming functinoality
 
