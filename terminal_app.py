@@ -15,7 +15,8 @@ class QuizbowlGame:
 
     def read_tossup(self):
         tossup = self.tossups[self.tossup_index]
-        words = tossup['question_sanitized'].split()
+        words = tossup['question_sanitized'].split()        
+        question = tossup['question_sanitized']
         print(f"Tossup {tossup['number']}:")
         attempted_teams = set()
         idx = 0
@@ -40,18 +41,26 @@ class QuizbowlGame:
             start = time.time()
             buzzed = False
             while time.time() - start < wait_time:
-                if self.check_for_buzz():
+                buzz_type = self.check_for_buzz(question)
+                if buzz_type == 1:
                     buzzed = True
+                    team = "TeamA"
                     break
+                elif buzz_type == 2:
+                    buzzed = True
+                    team = "TeamB"
+                    break                
                 time.sleep(0.05)
 
             if buzzed:
                 print("\nBuzz detected!")
-                team = input("Which team buzzed? (TeamA/TeamB): ").strip()
                 if team not in self.scores or team in attempted_teams:
                     print("Invalid or duplicate buzz. Ignoring.")
                     continue
-                answer = input(f"{team}, your answer: ")
+                if buzz_type == 1:
+                    answer = input(f"{team}, your answer: ")
+                elif buzz_type == 2:
+                    answer = self.ask_llm_player(question)
                 buzz_time = 'power' if not reading_done and idx < len(words) // 2 else ('interrupt' if not reading_done else 'normal')
                 attempted_teams.add(team)
                 result = self.buzz(team, answer, buzz_time=buzz_time, attempted_teams=attempted_teams)
@@ -68,14 +77,25 @@ class QuizbowlGame:
         print(f"No more buzzes. The correct answer was: {tossup['answer_sanitized']}")
         self.tossup_index += 1
     
-    def check_for_buzz(self):
+    def ask_llm_player(self, question):
+        response = ollama.chat(model='llama3', messages=[
+        {
+            'role': 'user',
+            'content': f"answer the question: {' '.join(question)}. Only give the answer only",
+        }
+        ])        
+        return response.message.content
+
+    def check_for_buzz(self, question):
         # Check if Enter is pressed (simulate buzz)
         import sys
         import select
         if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
             line = sys.stdin.readline()
-            return True
-        return False
+            return 1
+        if not '0' in self.ask_llm_player(question):
+            return 2
+        return 0
 
     def buzz(self, team, answer, buzz_time='normal', attempted_teams=None):
         tossup = self.tossups[self.tossup_index]
@@ -103,7 +123,10 @@ class QuizbowlGame:
         total_bonus = 0
         for i, part in enumerate(bonus.get('parts_sanitized', [])):
             print(f"Part {i+1}: {part}")
-            answer = input(f"{self.current_bonus_team}, your answer: ")
+            if self.current_bonus_team == 'TeamB':
+                answer = self.ask_llm_player(part)
+            elif self.current_bonus_team == 'TeamA':
+                answer = input(f"{self.current_bonus_team}, your answer: ")
             if self.check_answer(answer, bonus.get('answers_sanitized', [''])[i]):
                 value = bonus.get('values', [10]*len(bonus.get('parts_sanitized', [])))[i]
                 self.scores[self.current_bonus_team] += value
