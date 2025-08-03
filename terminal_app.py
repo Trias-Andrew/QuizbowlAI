@@ -33,14 +33,20 @@ class QuizbowlGame:
             if buzzed:
                 print("\nBuzz detected!")
                 team = input("Which team buzzed? (TeamA/TeamB): ").strip()
+                if team not in self.scores or team in attempted_teams:
+                    print("Invalid or duplicate buzz. Ignoring.")
+                    buzzed = False
+                    continue
                 answer = input(f"{team}, your answer: ")
                 buzz_time = 'power' if idx < len(words) // 2 else 'interrupt'
                 attempted_teams.add(team)
                 result = self.buzz(team, answer, buzz_time=buzz_time, attempted_teams=attempted_teams)
                 if result == "correct":
                     return
+                elif attempted_teams == {'TeamA', 'TeamB'}:
+                    print("Both teams have buzzed. No more buzzes allowed for this tossup.")
+                    break
                 buzzed = False
-                continue
             idx += 1
         print()  # Newline after question
 
@@ -59,6 +65,9 @@ class QuizbowlGame:
                 result = self.buzz(team, answer, buzz_time='normal', attempted_teams=attempted_teams)
                 if result == "correct":
                     return
+                elif attempted_teams == {'TeamA', 'TeamB'}:
+                    print("Both teams have buzzed. No more buzzes allowed for this tossup.")
+                    break
             time.sleep(0.05)
 
         print(f"No more buzzes. The correct answer was: {tossup['answer_sanitized']}")
@@ -73,7 +82,7 @@ class QuizbowlGame:
             return True
         return False
 
-    def buzz(self, team, answer, buzz_time='normal'):
+    def buzz(self, team, answer, buzz_time='normal', attempted_teams=None):
         tossup = self.tossups[self.tossup_index]
         correct = self.check_answer(answer, tossup['answer_sanitized'])
         if correct:
@@ -83,18 +92,13 @@ class QuizbowlGame:
             print(f"{team} answered correctly! +{points} points.")
             self.tossup_index += 1
             self.ask_bonus()
+            return "correct"
         else:
             if buzz_time == 'interrupt':
                 self.scores[team] -= 5
                 print(f"{team} interrupted incorrectly! -5 points.")
             print(f"{team} answered incorrectly.")
-            # Allow other team to buzz after incorrect interrupt
-            other_team = 'TeamB' if team == 'TeamA' else 'TeamA'
-            answer = input(f"{other_team}, your answer (or Enter to skip): ")
-            if answer.strip():
-                self.buzz(other_team, answer, buzz_time='normal')
-            else:
-                self.tossup_index += 1
+            return "incorrect"
 
     def ask_bonus(self):
         bonus = self.bonuses[self.bonus_index]
