@@ -1,5 +1,6 @@
 import json
 import time
+import ollama
 
 class QuizbowlGame:
     def __init__(self, tossups, bonuses, read_speed=0.5):
@@ -10,6 +11,7 @@ class QuizbowlGame:
         self.scores = {'TeamA': 0, 'TeamB': 0}
         self.current_bonus_team = None
         self.read_speed = read_speed  # seconds per word
+        self.client = ollama.Client()
 
     def read_tossup(self):
         tossup = self.tossups[self.tossup_index]
@@ -93,7 +95,14 @@ class QuizbowlGame:
         self.bonus_index += 1
 
     def check_answer(self, player_answer, correct_answer):
-        return player_answer.strip().lower() in correct_answer.lower()
+        response = ollama.chat(model='llama2', messages=[
+        {
+            'role': 'user',
+            'content': f"The groundtruth is '{correct_answer}'. The player answered '{player_answer}'. Is the answer correct? Only print 1 or 0 nothing else. If the player answer is correct according to the groundtruth answer print 1 if not print 0.",
+        },
+        ])
+        print(response.message.content)
+        return bool(int(response.message.content))
 
     def show_scores(self):
         print("Scores:", self.scores)
