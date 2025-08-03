@@ -16,56 +16,56 @@ class QuizbowlGame:
     # ...existing code...
 
     def read_tossup(self):
-    tossup = self.tossups[self.tossup_index]
-    words = tossup['question_sanitized'].split()
-    print(f"Tossup {tossup['number']}:")
-    buzzed = False
-    attempted_teams = set()
-    idx = 0
-    while idx < len(words):
-        print(words[idx], end=' ', flush=True)
-        start = time.time()
-        while time.time() - start < self.read_speed:
-            if self.check_for_buzz():
-                buzzed = True
-                break
-            time.sleep(0.05)
-        if buzzed:
-            print("\nBuzz detected!")
-            team = input("Which team buzzed? (TeamA/TeamB): ").strip()
-            if team not in self.scores or team in attempted_teams:
-                print("Invalid or duplicate buzz. Ignoring.")
-                buzzed = False
-                continue
-            answer = input(f"{team}, your answer: ")
-            buzz_time = 'power' if idx < len(words) // 2 else 'interrupt'
-            attempted_teams.add(team)
-            result = self.buzz(team, answer, buzz_time=buzz_time, attempted_teams=attempted_teams)
-            if result == "correct":
-                return
-            # If incorrect, continue reading for other team to buzz (if they haven't)
-            buzzed = False
-            continue
-        idx += 1
-    print()  # Newline after question
-    # After reading, allow buzz from either team if not already attempted
-    for team in self.scores:
-        if team not in attempted_teams:
-            try_buzz = input(f"{team}, do you want to buzz? (y/n): ").strip().lower()
-            if try_buzz == 'y':
+        tossup = self.tossups[self.tossup_index]
+        words = tossup['question_sanitized'].split()
+        print(f"Tossup {tossup['number']}:")
+        buzzed = False
+        attempted_teams = set()
+        idx = 0
+        while idx < len(words):
+            print(words[idx], end=' ', flush=True)
+            start = time.time()
+            while time.time() - start < self.read_speed:
+                if self.check_for_buzz():
+                    buzzed = True
+                    break
+                time.sleep(0.05)
+            if buzzed:
+                print("\nBuzz detected!")
+                team = input("Which team buzzed? (TeamA/TeamB): ").strip()
+                if team not in self.scores or team in attempted_teams:
+                    print("Invalid or duplicate buzz. Ignoring.")
+                    buzzed = False
+                    continue
                 answer = input(f"{team}, your answer: ")
+                buzz_time = 'power' if idx < len(words) // 2 else 'interrupt'
                 attempted_teams.add(team)
-                result = self.buzz(team, answer, buzz_time='normal', attempted_teams=attempted_teams)
+                result = self.buzz(team, answer, buzz_time=buzz_time, attempted_teams=attempted_teams)
                 if result == "correct":
                     return
-    # If less than both teams have attempted, wait 3 seconds then reveal answer
-    if len(attempted_teams) < 2:
-        print("No more buzzes. Revealing answer in 3 seconds...")
-        time.sleep(3)
-        print(f"The correct answer was: {tossup['answer_sanitized']}")
-    else:
-        print(f"The correct answer was: {tossup['answer_sanitized']}")
-    self.tossup_index += 1
+                # If incorrect, continue reading for other team to buzz (if they haven't)
+                buzzed = False
+                continue
+            idx += 1
+        print()  # Newline after question
+        # After reading, allow buzz from either team if not already attempted
+        for team in self.scores:
+            if team not in attempted_teams:
+                try_buzz = input(f"{team}, do you want to buzz? (y/n): ").strip().lower()
+                if try_buzz == 'y':
+                    answer = input(f"{team}, your answer: ")
+                    attempted_teams.add(team)
+                    result = self.buzz(team, answer, buzz_time='normal', attempted_teams=attempted_teams)
+                    if result == "correct":
+                        return
+        # If less than both teams have attempted, wait 3 seconds then reveal answer
+        if len(attempted_teams) < 2:
+            print("No more buzzes. Revealing answer in 3 seconds...")
+            time.sleep(3)
+            print(f"The correct answer was: {tossup['answer_sanitized']}")
+        else:
+            print(f"The correct answer was: {tossup['answer_sanitized']}")
+        self.tossup_index += 1
     
     def check_for_buzz(self):
         # Check if Enter is pressed (simulate buzz)
