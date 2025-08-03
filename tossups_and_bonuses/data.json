@@ -1,0 +1,763 @@
+{
+    "tossups": [
+        {
+            "_id": "6837af63278db02eb79f1cbb",
+            "question": "<b>This value is constant in all directions, according to the Michelson-Morley experiment. One expression of the</b> <b>Lorentz factor includes a squared ratio between an object's velocity and this value. The theoretical minimum</b> <b>latency of a</b> (*) fiber optic network is based on thisvalue, which is squared and multiplied by mass to equal energy, according to Einstein. For ten points, name this \"universal speed limit,\" roughly equal to three hundred million meters per second.",
+            "question_sanitized": "This value is constant in all directions, according to the Michelson-Morley experiment. One expression of the Lorentz factor includes a squared ratio between an object's velocity and this value. The theoretical minimum latency of a (*) fiber optic network is based on thisvalue, which is squared and multiplied by mass to equal energy, according to Einstein. For ten points, name this \"universal speed limit,\" roughly equal to three hundred million meters per second.",
+            "answer": "<b><u>speed of light</u></b> (accept<b><u>c</u></b>before it is read;prompt on \"speed\" or \"velocity\")",
+            "answer_sanitized": "speed of light (acceptcbefore it is read;prompt on \"speed\" or \"velocity\")",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Science",
+            "subcategory": "Physics",
+            "number": 1,
+            "createdAt": "2025-05-29T00:50:43.221Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cbc",
+            "question": "<b>Goldbach's comet is a graph of the ways that these numbers can be added together to make even numbers.</b> <b>Goldbach's conjecture asks whether every even number greater than two is the sum of</b> (*) two of these numbers, which are often called the \"building blocks\" of number theory. Eleven, seven, and two are examples of, for ten points, what type of number that is only divisible by itself and one, unlike a composite number?",
+            "question_sanitized": "Goldbach's comet is a graph of the ways that these numbers can be added together to make even numbers. Goldbach's conjecture asks whether every even number greater than two is the sum of (*) two of these numbers, which are often called the \"building blocks\" of number theory. Eleven, seven, and two are examples of, for ten points, what type of number that is only divisible by itself and one, unlike a composite number?",
+            "answer": "<b><u>prime</u></b>numbers",
+            "answer_sanitized": "primenumbers",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Science",
+            "subcategory": "Other Science",
+            "alternate_subcategory": "Math",
+            "number": 2,
+            "createdAt": "2025-05-29T00:50:43.224Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cbd",
+            "question": "<b>A musical piece called \"La tempesta di mare\"[la tem-PES-tahdee MAR-ay]comes after these works in a</b> <b>collection called</b><i><b>The Contest Between Harmony andInvention</b></i><b>. A viola depicts a barking dog in the firstof</b> <b>these pieces, which have accompanying sonnets to describe</b> (*) thunderstorms and bitter cold. Antonio Vivaldi wrote, for ten points, what quartet of violin concertos, each of which depicts a different period of the year?",
+            "question_sanitized": "A musical piece called \"La tempesta di mare\"[la tem-PES-tahdee MAR-ay]comes after these works in a collection calledThe Contest Between Harmony andInvention. A viola depicts a barking dog in the firstof these pieces, which have accompanying sonnets to describe (*) thunderstorms and bitter cold. Antonio Vivaldi wrote, for ten points, what quartet of violin concertos, each of which depicts a different period of the year?",
+            "answer": "The<b><u>Four Seasons</u></b> (accept Le<b><u>quattro stagioni</u></b>;do not accept or prompt on \"The Seasons\" alone)",
+            "answer_sanitized": "TheFour Seasons (accept Lequattro stagioni;do not accept or prompt on \"The Seasons\" alone)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Fine Arts",
+            "subcategory": "Auditory Fine Arts",
+            "number": 3,
+            "createdAt": "2025-05-29T00:50:43.227Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cbe",
+            "question": "<b>Laws that banned this activity were considered legal by the case</b><i><b>Minor v. Happersett</b></i><b>, though that rulingdid</b> <b>not impact an 1869 law that explicitly allowed this activity in Wyoming. Banners attacking \"Kaiser Wilson\"</b> <b>were held by the</b> (*) Silent Sentinels, who used hungerstrikes to protest in favor of this activity. Alice Paul and Carrie Chapman Catt fought to gain, for ten points, what political right that was guaranteed by the 19th Amendment for women?",
+            "question_sanitized": "Laws that banned this activity were considered legal by the caseMinor v. Happersett, though that rulingdid not impact an 1869 law that explicitly allowed this activity in Wyoming. Banners attacking \"Kaiser Wilson\" were held by the (*) Silent Sentinels, who used hungerstrikes to protest in favor of this activity. Alice Paul and Carrie Chapman Catt fought to gain, for ten points, what political right that was guaranteed by the 19th Amendment for women?",
+            "answer": "women's<b><u>suffrage</u></b> (accept descriptions of theright to<b><u>vote</u></b>)",
+            "answer_sanitized": "women'ssuffrage (accept descriptions of theright tovote)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "History",
+            "subcategory": "American History",
+            "number": 4,
+            "createdAt": "2025-05-29T00:50:43.227Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cbf",
+            "question": "<b>This country is home to the author of</b><i><b>When We DeadAwaken</b></i><b>, who wrote a play in which Dr. Stockmann</b> <b>discovers contaminated water. That author from this country also wrote a play in which a character dances</b> <b>the</b> (*) tarantella to distract her husband. In thatplay from this country, Krogstad blackmails Nora Helmer with a forged loan.<i>An Enemy of the People</i>and<i>A Doll’s House</i>are from, for ten points, what home country of Henrik Ibsen with its capital at Oslo?",
+            "question_sanitized": "This country is home to the author ofWhen We DeadAwaken, who wrote a play in which Dr. Stockmann discovers contaminated water. That author from this country also wrote a play in which a character dances the (*) tarantella to distract her husband. In thatplay from this country, Krogstad blackmails Nora Helmer with a forged loan.An Enemy of the PeopleandA Doll's Houseare from, for ten points, what home country of Henrik Ibsen with its capital at Oslo?",
+            "answer": "<b><u>Norway</u></b> (accept Kingdom of<b><u>Norway</u></b>;<b><u>Norge</u></b>or<b><u>Noreg</u></b>; accept Kongeriket<b><u>Norge</u></b>)",
+            "answer_sanitized": "Norway (accept Kingdom ofNorway;NorgeorNoreg; accept KongeriketNorge)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Literature",
+            "subcategory": "European Literature",
+            "alternate_subcategory": "Drama",
+            "number": 5,
+            "createdAt": "2025-05-29T00:50:43.230Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cc0",
+            "question": "<b>This man discussed five-year-old \"Little Hans's\" fear of horses alongside the child's confusion over the birth</b> <b>of his little sister. In the essay</b><i><b>Beyond the PleasurePrinciple</b></i><b>, this man divided the human unconsciousmind</b> <b>into three parts: the</b> (*) id, the ego, and the super-ego.The field of psychoanalysis was founded by, for ten points, what Austrian psychologist whose magnum opus was<i>TheInterpretation of Dreams</i>?",
+            "question_sanitized": "This man discussed five-year-old \"Little Hans's\" fear of horses alongside the child's confusion over the birth of his little sister. In the essayBeyond the PleasurePrinciple, this man divided the human unconsciousmind into three parts: the (*) id, the ego, and the super-ego.The field of psychoanalysis was founded by, for ten points, what Austrian psychologist whose magnum opus wasTheInterpretation of Dreams?",
+            "answer": "Sigmund<b><u>Freud</u></b> (accept Sigismund Schlomo<b><u>Freud</u></b>)",
+            "answer_sanitized": "SigmundFreud (accept Sigismund SchlomoFreud)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Social Science",
+            "subcategory": "Social Science",
+            "alternate_subcategory": "Psychology",
+            "number": 6,
+            "createdAt": "2025-05-29T00:50:43.231Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cc1",
+            "question": "<b>This organ receives lactate as part of the Cori cycle and converts it to glucose. This organ receives</b> <b>deoxygenated blood from the spleen via the portal vein. This organ contains Kupffer cells, and its failure to</b> <b>break down</b> (*) bilirubin can cause jaundice. Thisorgan is inflamed in hepatitis and is damaged in cirrhosis, which can result from alcohol overconsumption. For ten points, name this largest internal organ of the human body.",
+            "question_sanitized": "This organ receives lactate as part of the Cori cycle and converts it to glucose. This organ receives deoxygenated blood from the spleen via the portal vein. This organ contains Kupffer cells, and its failure to break down (*) bilirubin can cause jaundice. Thisorgan is inflamed in hepatitis and is damaged in cirrhosis, which can result from alcohol overconsumption. For ten points, name this largest internal organ of the human body.",
+            "answer": "<b><u>liver</u></b>",
+            "answer_sanitized": "liver",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Science",
+            "subcategory": "Biology",
+            "number": 7,
+            "createdAt": "2025-05-29T00:50:43.231Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cc2",
+            "question": "<b>This god nursed from the goat Amalthea. In some myths, this god swallowed his first wife, Metis, to prevent</b> <b>her from having a son who would overthrow this god, and this god himself was replaced with a rock by</b> (*) Rhea to prevent Cronus from swallowing him whole. This god overthrew the Titans to replace them with his siblings, including Poseidon. For ten points, name this chief Olympian god from Greek myth, the husband of Hera.",
+            "question_sanitized": "This god nursed from the goat Amalthea. In some myths, this god swallowed his first wife, Metis, to prevent her from having a son who would overthrow this god, and this god himself was replaced with a rock by (*) Rhea to prevent Cronus from swallowing him whole. This god overthrew the Titans to replace them with his siblings, including Poseidon. For ten points, name this chief Olympian god from Greek myth, the husband of Hera.",
+            "answer": "<b><u>Zeus</u></b> (accept<b><u>Zeus</u></b>Pater)",
+            "answer_sanitized": "Zeus (acceptZeusPater)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Mythology",
+            "subcategory": "Mythology",
+            "number": 8,
+            "createdAt": "2025-05-29T00:50:43.231Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cc3",
+            "question": "<b>This country was led by Fulgencio Batista until 1959, when a revolution that began at the Moncada Barracks</b> <b>six years earlier finally succeeded. Playa Giron[ply-uhhee-ROHN]was the site of a failed invasion of this</b> <b>country.</b> (*) Che Guevara assisted this country's futuredictator, who survived dozens of assassination attempts and repelled the Bay of Pigs Invasion. For ten points, name this Caribbean country where Fidel Castro ruled for five decades from Havana.",
+            "question_sanitized": "This country was led by Fulgencio Batista until 1959, when a revolution that began at the Moncada Barracks six years earlier finally succeeded. Playa Giron[ply-uhhee-ROHN]was the site of a failed invasion of this country. (*) Che Guevara assisted this country's futuredictator, who survived dozens of assassination attempts and repelled the Bay of Pigs Invasion. For ten points, name this Caribbean country where Fidel Castro ruled for five decades from Havana.",
+            "answer": "<b><u>Cuba</u></b> (or Republic of<b><u>Cuba</u></b>; accept Republicade<b><u>Cuba</u></b>)",
+            "answer_sanitized": "Cuba (or Republic ofCuba; accept RepublicadeCuba)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "History",
+            "subcategory": "World History",
+            "number": 9,
+            "createdAt": "2025-05-29T00:50:43.231Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cc4",
+            "question": "<b>This literary character is mistaken for the housemaid Mary Ann by a creature who employs Bill the Lizard</b> <b>to get this character out of his house. This character is transformed by a fan, mushrooms, and magical cakes</b> <b>marked</b> (*) \"EAT ME\" after following a White Rabbitinto a land inhabited by Tweedle-Dee, Tweedle-Dum, and the Cheshire Cat. For ten points, name the little girl created by Lewis Carroll who goes on adventures in Wonderland.",
+            "question_sanitized": "This literary character is mistaken for the housemaid Mary Ann by a creature who employs Bill the Lizard to get this character out of his house. This character is transformed by a fan, mushrooms, and magical cakes marked (*) \"EAT ME\" after following a White Rabbitinto a land inhabited by Tweedle-Dee, Tweedle-Dum, and the Cheshire Cat. For ten points, name the little girl created by Lewis Carroll who goes on adventures in Wonderland.",
+            "answer": "<b><u>Alice</u></b> (accept<b><u>Alice's Adventures in Wonderland</u></b>;accept<b><u>Alice in Wonderland</u></b>; accept Alice<b><u>Liddell</u></b>)",
+            "answer_sanitized": "Alice (acceptAlice's Adventures in Wonderland;acceptAlice in Wonderland; accept AliceLiddell)",
+            "updatedAt": "2025-05-29T00:51:20.947Z",
+            "category": "Literature",
+            "subcategory": "American Literature",
+            "alternate_subcategory": "Short Fiction",
+            "number": 10,
+            "createdAt": "2025-05-29T00:50:43.233Z",
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        }
+    ],
+    "bonuses": [
+        {
+            "_id": "6837af63278db02eb79f1ccf",
+            "leadin": "This novel's title character encounters the Big and Little Endian's debate on how to crack eggs in a land ofsix-inch-tall people. For ten points each,",
+            "leadin_sanitized": "This novel's title character encounters the Big and Little Endian's debate on how to crack eggs in a land ofsix-inch-tall people. For ten points each,",
+            "parts": [
+                "Name this satirical novel by Jonathan Swift whose title doctor voyages to fictional countries like Lilliput.",
+                "<i> Gulliver's Travels</i>satirizes Christian religious conflicts, a subject that Swift also addressed in this satiricalessay. This essay about the Irish Potato Famine suggests that the poor should eat their children to survive.",
+                "In both<i>Gulliver's Travels</i>and<i>A Modest Proposal</i>, Swift satirizes the conflicts between English Protestantsand members of this Christian denomination, which is headed by the Roman pope."
+            ],
+            "parts_sanitized": [
+                "Name this satirical novel by Jonathan Swift whose title doctor voyages to fictional countries like Lilliput.",
+                "Gulliver's Travelssatirizes Christian religious conflicts, a subject that Swift also addressed in this satiricalessay. This essay about the Irish Potato Famine suggests that the poor should eat their children to survive.",
+                "In bothGulliver's TravelsandA Modest Proposal, Swift satirizes the conflicts between English Protestantsand members of this Christian denomination, which is headed by the Roman pope."
+            ],
+            "answers": [
+                "<b><u>Gulliver's Travels</u></b> (accept<b><u>Travels into SeveralRemote Nations of the World. In Four Parts. By</u><u>Lemuel Gulliver, First a Surgeon, and then a Captain of Several Ships</u></b>)",
+                "A<b><u>Modest Proposal</u></b> (accept A<b><u>Modest Proposal</u></b>for Preventing the Children of Poor People fromBeing a Burthen to Their Parents or Country, and for Making Them Beneficial to the Publick)",
+                "<b><u>Catholic</u></b>church (accept Roman<b><u>Catholic</u></b>ism;prompt on \"Christianity\" before it is read; do not acceptor prompt on \"Orthodoxy\" or similar answers)"
+            ],
+            "answers_sanitized": [
+                "Gulliver's Travels (acceptTravels into SeveralRemote Nations of the World. In Four Parts. ByLemuel Gulliver, First a Surgeon, and then a Captain of Several Ships)",
+                "AModest Proposal (accept AModest Proposalfor Preventing the Children of Poor People fromBeing a Burthen to Their Parents or Country, and for Making Them Beneficial to the Publick)",
+                "Catholicchurch (accept RomanCatholicism;prompt on \"Christianity\" before it is read; do not acceptor prompt on \"Orthodoxy\" or similar answers)"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Literature",
+            "subcategory": "British Literature",
+            "alternate_subcategory": "Misc Literature",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "m",
+                "h",
+                "e"
+            ],
+            "number": 1,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd0",
+            "leadin": "Give the following about French diplomat Charles-Maurice de Talleyrand, for ten points each.",
+            "leadin_sanitized": "Give the following about French diplomat Charles-Maurice de Talleyrand, for ten points each.",
+            "parts": [
+                "As a bishop, Talleyrand was part of the First Estate in the Estates General in 1789, at the outset of this periodof conflict. During this event, the Bastille was stormed and many nobles were executed by guillotine.",
+                "The French Revolution ended with the rise of this friend of Talleyrand as First Consul of France. This manlater became the French Emperor.",
+                "After Napoleon's downfall, the powers of Europe held this year-long meeting to create a new order ofEuropean power. Talleyrand represented the defeated French at this meeting."
+            ],
+            "parts_sanitized": [
+                "As a bishop, Talleyrand was part of the First Estate in the Estates General in 1789, at the outset of this periodof conflict. During this event, the Bastille was stormed and many nobles were executed by guillotine.",
+                "The French Revolution ended with the rise of this friend of Talleyrand as First Consul of France. This manlater became the French Emperor.",
+                "After Napoleon's downfall, the powers of Europe held this year-long meeting to create a new order ofEuropean power. Talleyrand represented the defeated French at this meeting."
+            ],
+            "answers": [
+                "French<b><u>Revolution</u></b>",
+                "<b><u>Napoleon</u></b> <b><u>Bonaparte</u></b> (accept either underlinedname; accept<b><u>Napoleon I</u></b>)",
+                "<b><u>Congress of Vienna</u></b>"
+            ],
+            "answers_sanitized": [
+                "FrenchRevolution",
+                "Napoleon Bonaparte (accept either underlinedname; acceptNapoleon I)",
+                "Congress of Vienna"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "History",
+            "subcategory": "European History",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "e",
+                "m",
+                "h"
+            ],
+            "number": 2,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd1",
+            "leadin": "A region of southwest Wisconsin and the bordering parts of Minnesota, Iowa, and Illinois is known as the\"Driftless Area.\" Answer the following about it, for ten points each.",
+            "leadin_sanitized": "A region of southwest Wisconsin and the bordering parts of Minnesota, Iowa, and Illinois is known as the\"Driftless Area.\" Answer the following about it, for ten points each.",
+            "parts": [
+                "\"Driftless\" means that the land has no drift, the general term for rock deposits left behind by these largemoving bodies of ice.",
+                "Drift may build up in piles that are given this name, from the French for \"mound.\" These piles are classifiedin types like terminal, lateral, and medial based on how the sediment was carried and dropped by the glacier.",
+                "Wisconsin's nineteenth-century economy was driven by mining of this metal element in the Driftless Area.The town of Galena, Illinois is named for an ore of this element, whose chemical symbol is Pb[spell it]."
+            ],
+            "parts_sanitized": [
+                "\"Driftless\" means that the land has no drift, the general term for rock deposits left behind by these largemoving bodies of ice.",
+                "Drift may build up in piles that are given this name, from the French for \"mound.\" These piles are classifiedin types like terminal, lateral, and medial based on how the sediment was carried and dropped by the glacier.",
+                "Wisconsin's nineteenth-century economy was driven by mining of this metal element in the Driftless Area.The town of Galena, Illinois is named for an ore of this element, whose chemical symbol is Pb[spell it]."
+            ],
+            "answers": [
+                "<b><u>glacier</u></b>s",
+                "<b><u>moraine</u></b>s",
+                "<b><u>lead</u></b>"
+            ],
+            "answers_sanitized": [
+                "glaciers",
+                "moraines",
+                "lead"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Science",
+            "subcategory": "Other Science",
+            "alternate_subcategory": "Earth Science",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "e",
+                "h",
+                "m"
+            ],
+            "number": 3,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd2",
+            "leadin": "A navigational aid on the coast of Galicia in northwest Spain, dating from the first century CE, is namedafter this mythical man because it marks the western limit of his travels. For ten points each,",
+            "leadin_sanitized": "A navigational aid on the coast of Galicia in northwest Spain, dating from the first century CE, is namedafter this mythical man because it marks the western limit of his travels. For ten points each,",
+            "parts": [
+                "Name this strongman from Roman myth who wore the skin of the Nemean Lion.",
+                "The Tower of Hercules is this type of building that helps approaching ships navigate toward safe harbor oraway from dangerous coastlines.",
+                "Another navigational aid on the west end of the Mediterranean Sea is a pair of mountains that this ancientRoman historian named the \"Pillars of Hercules.\" This historian died while trying to rescue a friend during theeruption of Mount Vesuvius."
+            ],
+            "parts_sanitized": [
+                "Name this strongman from Roman myth who wore the skin of the Nemean Lion.",
+                "The Tower of Hercules is this type of building that helps approaching ships navigate toward safe harbor oraway from dangerous coastlines.",
+                "Another navigational aid on the west end of the Mediterranean Sea is a pair of mountains that this ancientRoman historian named the \"Pillars of Hercules.\" This historian died while trying to rescue a friend during theeruption of Mount Vesuvius."
+            ],
+            "answers": [
+                "<b><u>Hercules</u></b> (accept<b><u>Tower of Hercules</u></b>; acceptTorre de<b><u>Hércules</u></b>; do not accept or prompt on\"Heracles\")",
+                "<b><u>lighthouse</u></b>",
+                "<b><u>Pliny the Elder</u></b> (accept<b><u>Gaius Plinius Secundus</u></b>;prompt on \"Pliny\")"
+            ],
+            "answers_sanitized": [
+                "Hercules (acceptTower of Hercules; acceptTorre deHercules; do not accept or prompt on\"Heracles\")",
+                "lighthouse",
+                "Pliny the Elder (acceptGaius Plinius Secundus;prompt on \"Pliny\")"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "History",
+            "subcategory": "Ancient History",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "m",
+                "e",
+                "h"
+            ],
+            "number": 4,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd3",
+            "leadin": "This god was the mother of an eight-legged horse and the father of three other monsters. For ten pointseach,",
+            "leadin_sanitized": "This god was the mother of an eight-legged horse and the father of three other monsters. For ten pointseach,",
+            "parts": [
+                "Name this trickster god from Norse myth.",
+                "Loki transformed into a female horse to become the mother of this eight-legged steed of Odin.",
+                "Loki was the father of the Fenris Wolf, Jormungandr[YOHR-mun-gon-dur], and Hel with Angrbotha, whowas one of these large, mythical creatures."
+            ],
+            "parts_sanitized": [
+                "Name this trickster god from Norse myth.",
+                "Loki transformed into a female horse to become the mother of this eight-legged steed of Odin.",
+                "Loki was the father of the Fenris Wolf, Jormungandr[YOHR-mun-gon-dur], and Hel with Angrbotha, whowas one of these large, mythical creatures."
+            ],
+            "answers": [
+                "<b><u>Loki</u></b>",
+                "<b><u>Sleipnir</u></b> [SLYP-neer]",
+                "<b><u>giant</u></b> (accept ice<b><u>giant</u></b>; accept<b><u>Jotunn</u></b>; accept<b><u>jotnar</u></b>)"
+            ],
+            "answers_sanitized": [
+                "Loki",
+                "Sleipnir [SLYP-neer]",
+                "giant (accept icegiant; acceptJotunn; acceptjotnar)"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Mythology",
+            "subcategory": "Mythology",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "e",
+                "h",
+                "m"
+            ],
+            "number": 5,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd4",
+            "leadin": "One of these instruments called \"the Voice of Jupiter\" is played by viral TikTok star Anna Lapwood. Forten points each,",
+            "leadin_sanitized": "One of these instruments called \"the Voice of Jupiter\" is played by viral TikTok star Anna Lapwood. Forten points each,",
+            "parts": [
+                "Name this massive, wind-blown keyboard instrument most commonly found in churches and cathedrals. Theidiom \"pull out all the stops\" refers to making this instrument play with its fullest sound.",
+                "Lapwood went viral with a mashup of a Bach toccata and the opening to this rock band's \"Thunderstruck.\"This Australian classic rock band's other hits include \"Back in Black.\"",
+                "Lapwood works as an Associate Artist with this London venue, named for the husband of Queen Victoria.The last verse of the Beatles' \"A Day in the Life\" cryptically notes \"now they know how many holes it takes to fill\"this concert venue."
+            ],
+            "parts_sanitized": [
+                "Name this massive, wind-blown keyboard instrument most commonly found in churches and cathedrals. Theidiom \"pull out all the stops\" refers to making this instrument play with its fullest sound.",
+                "Lapwood went viral with a mashup of a Bach toccata and the opening to this rock band's \"Thunderstruck.\"This Australian classic rock band's other hits include \"Back in Black.\"",
+                "Lapwood works as an Associate Artist with this London venue, named for the husband of Queen Victoria.The last verse of the Beatles' \"A Day in the Life\" cryptically notes \"now they know how many holes it takes to fill\"this concert venue."
+            ],
+            "answers": [
+                "pipe<b><u>organ</u></b>",
+                "<b><u>AC/DC</u></b>",
+                "Royal<b><u>Albert Hall</u></b> (accept the<b><u>Albert Hall</u></b>;prompt on \"(Prince) Albert\")"
+            ],
+            "answers_sanitized": [
+                "pipeorgan",
+                "AC/DC",
+                "RoyalAlbert Hall (accept theAlbert Hall;prompt on \"(Prince) Albert\")"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Fine Arts",
+            "subcategory": "Auditory Fine Arts",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "e",
+                "m",
+                "h"
+            ],
+            "number": 6,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd5",
+            "leadin": "These works were criticized by authors using the pseudonym Brutus. For ten points each,",
+            "leadin_sanitized": "These works were criticized by authors using the pseudonym Brutus. For ten points each,",
+            "parts": [
+                "Name these eighty-five essays promoting the U.S. Constitution, written in part by John Jay and JamesMadison. The fifty-first of these essays claims, \"If men were angels, no government would be necessary.\"",
+                "The Federalist Papers were published under this pseudonym. This pseudonym was the name of a colleague ofBrutus who overthrew the Roman monarchy.",
+                "This man wrote fifty-one of the Federalist Papers, more than Jay or Madison. This first Secretary of theTreasury was killed in a duel with Aaron Burr."
+            ],
+            "parts_sanitized": [
+                "Name these eighty-five essays promoting the U.S. Constitution, written in part by John Jay and JamesMadison. The fifty-first of these essays claims, \"If men were angels, no government would be necessary.\"",
+                "The Federalist Papers were published under this pseudonym. This pseudonym was the name of a colleague ofBrutus who overthrew the Roman monarchy.",
+                "This man wrote fifty-one of the Federalist Papers, more than Jay or Madison. This first Secretary of theTreasury was killed in a duel with Aaron Burr."
+            ],
+            "answers": [
+                "The<b><u>Federalist Papers</u></b>",
+                "<b><u>Publius</u></b>Valerius Poplicola",
+                "Alexander<b><u>Hamilton</u></b>"
+            ],
+            "answers_sanitized": [
+                "TheFederalist Papers",
+                "PubliusValerius Poplicola",
+                "AlexanderHamilton"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "History",
+            "subcategory": "American History",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "m",
+                "h",
+                "e"
+            ],
+            "number": 7,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd6",
+            "leadin": "This Japanese work is often considered to be one of the world's first novels. For ten points each,",
+            "leadin_sanitized": "This Japanese work is often considered to be one of the world's first novels. For ten points each,",
+            "parts": [
+                "Name this eleventh-century novel about a \"Shining Prince,\" the second son of Emperor Kiritsubo[kee-ree-tsoo-boh].",
+                "<i> The Tale of Genji</i>is by this Heian-era[hay-onera]courtier, whose real identity is unknown.",
+                "Murasaki may have experimented with the style of the novel in the chapter \"Vanished into the Clouds,\"which is left blank to indicate this final event happening to Genji."
+            ],
+            "parts_sanitized": [
+                "Name this eleventh-century novel about a \"Shining Prince,\" the second son of Emperor Kiritsubo[kee-ree-tsoo-boh].",
+                "The Tale of Genjiis by this Heian-era[hay-onera]courtier, whose real identity is unknown.",
+                "Murasaki may have experimented with the style of the novel in the chapter \"Vanished into the Clouds,\"which is left blank to indicate this final event happening to Genji."
+            ],
+            "answers": [
+                "The<b><u>Tale of Genji</u></b> (accept<b><u>Genji Monogatari</u></b>)",
+                "<b><u>Murasaki</u></b>Shikibu (accept Lady<b><u>Murasaki</u></b>)",
+                "<b><u>death</u></b> (accept equivalents like Genji<b><u>dying</u></b>)"
+            ],
+            "answers_sanitized": [
+                "TheTale of Genji (acceptGenji Monogatari)",
+                "MurasakiShikibu (accept LadyMurasaki)",
+                "death (accept equivalents like Genjidying)"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Literature",
+            "subcategory": "World Literature",
+            "alternate_subcategory": "Misc Literature",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "m",
+                "h",
+                "e"
+            ],
+            "number": 8,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd7",
+            "leadin": "While living in France, this painter depicted his bedroom in the \"Yellow House\" that he shared with PaulGauguin. For ten points each,",
+            "leadin_sanitized": "While living in France, this painter depicted his bedroom in the \"Yellow House\" that he shared with PaulGauguin. For ten points each,",
+            "parts": [
+                "Name this Dutch painter who painted scenes from his own life in works like<i>Bedroom in Arles</i>.",
+                "This painting by Vincent van Gogh depicts five peasants huddled around a dimly-lit table to consume the titlefood.",
+                "Van Gogh placed himself in the asylum in Saint-Remy[sawn reh-MEE]after he cut off part of this body part.He painted himself with his head wrapped in bandages after he cut off this body part."
+            ],
+            "parts_sanitized": [
+                "Name this Dutch painter who painted scenes from his own life in works likeBedroom in Arles.",
+                "This painting by Vincent van Gogh depicts five peasants huddled around a dimly-lit table to consume the titlefood.",
+                "Van Gogh placed himself in the asylum in Saint-Remy[sawn reh-MEE]after he cut off part of this body part.He painted himself with his head wrapped in bandages after he cut off this body part."
+            ],
+            "answers": [
+                "Vincent<b><u>van Gogh</u></b> (accept Vincent Willem<b><u>vanGogh</u></b>)",
+                "The<b><u>Potato Eaters</u></b> (accept De<b><u>Aardappeleters</u></b>)",
+                "<b><u>ear</u></b> (accept<b><u>Self Portrait with Bandaged Ear</u></b>;accept left<b><u>ear</u></b>lobe)"
+            ],
+            "answers_sanitized": [
+                "Vincentvan Gogh (accept Vincent WillemvanGogh)",
+                "ThePotato Eaters (accept DeAardappeleters)",
+                "ear (acceptSelf Portrait with Bandaged Ear;accept leftearlobe)"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Fine Arts",
+            "subcategory": "Visual Fine Arts",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "m",
+                "h",
+                "e"
+            ],
+            "number": 9,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        },
+        {
+            "_id": "6837af63278db02eb79f1cd8",
+            "leadin": "Each of these particles for an atom can be classified by four quantum numbers, typically symbolized N,L, \"M sub L,\" and \"M sub S\"[N, L, ML, and MS]. Forten points each,",
+            "leadin_sanitized": "Each of these particles for an atom can be classified by four quantum numbers, typically symbolized N,L, \"M sub L,\" and \"M sub S\"[N, L, ML, and MS]. Forten points each,",
+            "parts": [
+                "Name these subatomic particles with a negative charge.",
+                "This shell is occupied by the outermost electrons that are available to form chemical bonds. The octet rulesuggests that most elements form enough bonds to have eight of these electrons.",
+                "The fourth quantum number indicates this property. The Pauli exclusion principle applies to fermions,including electrons, which have a half-integer value for this quantity."
+            ],
+            "parts_sanitized": [
+                "Name these subatomic particles with a negative charge.",
+                "This shell is occupied by the outermost electrons that are available to form chemical bonds. The octet rulesuggests that most elements form enough bonds to have eight of these electrons.",
+                "The fourth quantum number indicates this property. The Pauli exclusion principle applies to fermions,including electrons, which have a half-integer value for this quantity."
+            ],
+            "answers": [
+                "<b><u>electron</u></b>s",
+                "<b><u>valence</u></b>shell (accept<b><u>valence</u></b>electrons)",
+                "<b><u>spin</u></b> (accept<b><u>spin</u></b> (magnetic) quantum number;accept<b><u>angular momentum</u></b>)"
+            ],
+            "answers_sanitized": [
+                "electrons",
+                "valenceshell (acceptvalenceelectrons)",
+                "spin (acceptspin (magnetic) quantum number;acceptangular momentum)"
+            ],
+            "updatedAt": "2025-05-29T00:51:21.023Z",
+            "category": "Science",
+            "subcategory": "Physics",
+            "values": [
+                10,
+                10,
+                10
+            ],
+            "difficultyModifiers": [
+                "e",
+                "m",
+                "h"
+            ],
+            "number": 10,
+            "difficulty": 2,
+            "packet": {
+                "_id": "6837af63278db02eb79f1cba",
+                "name": "01",
+                "number": 1
+            },
+            "set": {
+                "_id": "6837af62278db02eb79f1cb9",
+                "name": "2025 Rockford Quiz Bowl Novice",
+                "year": 2025,
+                "standard": true
+            }
+        }
+    ]
+}
