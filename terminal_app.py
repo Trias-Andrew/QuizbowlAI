@@ -23,7 +23,9 @@ class QuizbowlGame:
         while idx < len(words):
             print(words[idx], end=' ', flush=True)
             start = time.time()
+            # Wait for read_speed seconds or until Enter is pressed
             while time.time() - start < self.read_speed:
+                # Non-blocking buzz check
                 if self.check_for_buzz():
                     buzzed = True
                     break
@@ -31,10 +33,6 @@ class QuizbowlGame:
             if buzzed:
                 print("\nBuzz detected!")
                 team = input("Which team buzzed? (TeamA/TeamB): ").strip()
-                if team not in self.scores or team in attempted_teams:
-                    print("Invalid or duplicate buzz. Ignoring.")
-                    buzzed = False
-                    continue
                 answer = input(f"{team}, your answer: ")
                 buzz_time = 'power' if idx < len(words) // 2 else 'interrupt'
                 attempted_teams.add(team)
@@ -75,7 +73,7 @@ class QuizbowlGame:
             return True
         return False
 
-    def buzz(self, team, answer, buzz_time='normal', attempted_teams=None):
+    def buzz(self, team, answer, buzz_time='normal'):
         tossup = self.tossups[self.tossup_index]
         correct = self.check_answer(answer, tossup['answer_sanitized'])
         if correct:
@@ -85,13 +83,18 @@ class QuizbowlGame:
             print(f"{team} answered correctly! +{points} points.")
             self.tossup_index += 1
             self.ask_bonus()
-            return "correct"
         else:
             if buzz_time == 'interrupt':
                 self.scores[team] -= 5
                 print(f"{team} interrupted incorrectly! -5 points.")
             print(f"{team} answered incorrectly.")
-            return "incorrect"
+            # Allow other team to buzz after incorrect interrupt
+            other_team = 'TeamB' if team == 'TeamA' else 'TeamA'
+            answer = input(f"{other_team}, your answer (or Enter to skip): ")
+            if answer.strip():
+                self.buzz(other_team, answer, buzz_time='normal')
+            else:
+                self.tossup_index += 1
 
     def ask_bonus(self):
         bonus = self.bonuses[self.bonus_index]
@@ -111,14 +114,19 @@ class QuizbowlGame:
         self.bonus_index += 1
 
     def check_answer(self, player_answer, correct_answer):
-        response = ollama.chat(model='llama2', messages=[
-        {
-            'role': 'user',
-            'content': f"The groundtruth is '{correct_answer}'. The player answered '{player_answer}'. Is the answer correct? Only print 1 or 0 nothing else. If the player answer is correct according to the groundtruth answer print 1 if not print 0.",
-        },
-        ])
-        print(response.message.content)
-        return bool(int(response.message.content))
+        while True:
+            response = ollama.chat(model='llama2', messages=[
+                {
+                    'role': 'user',
+                    'content': f"The groundtruth is '{correct_answer}'. The player answered '{player_answer}'. Is the answer correct? Only print 0 or 1 nothing else. If the player answer is correct according to the groundtruth answer print 1 if wrong print 0.",
+                },
+            ])
+            content = response.message.content.strip()
+            #print(content)
+            try:
+                return bool(int(content))
+            except ValueError:
+                print("Response was not an integer. Retrying...")
 
     def show_scores(self):
         print("Scores:", self.scores)
