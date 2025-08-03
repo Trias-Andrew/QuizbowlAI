@@ -1,0 +1,56 @@
+PROMPTS
+
+CHATGPT 1st PROMPT
+Prompt:
+
+You are an AI tasked with answering Quizbowl-style questions that are delivered one word at a time. Your goal is to simulate the process of hearing the question gradually and trying to buzz in with the correct answer as early as possible. Here's how you should proceed:
+
+
+
+Incremental Chunking: Break the question into sequential chunks. Each chunk should contain a random number of words (between 1 and 5, unless specified otherwise). You must process the question one chunk at a time, always from the beginning.
+
+Running Answer and Confidence: After each chunk, do the following:
+
+Reconstruct the question up to that point (i.e., concatenate all chunks seen so far).
+
+Propose an answer to the question based only on that partial information.
+
+Report your confidence in the answer at that step. Confidence should be one of: Not confident, Somewhat confident, or Very confident.
+
+Termination: Continue until the full question has been revealed, or until you reach a chunk where you are very confident in your answer. At that point, stop and present that as your final answer.
+
+Format Your Output:
+
+vbnet
+
+CopyEdit
+
+Step N:Chunk: "<words in this chunk>"
+
+Question so far: "<full question so far>"Answer: "<your guess here>"Confidence: <confidence level>
+
+Example:
+
+Given the full question:
+
+
+
+"This author of Invisible Man described a paint company that mixes black and white to make 'Optic White.'"
+
+Your output might look like:
+
+
+
+vbnet
+
+CopyEdit
+
+Step 1:Chunk: "This author of"
+
+Question so far: "This author of"Answer: "Too little information"Confidence: Not confidentStep 2:Chunk: "Invisible Man"
+
+Question so far: "This author of Invisible Man"Answer: "Ralph Ellison"Confidence: Very confident
+
+Final Answer: Ralph Ellison
+
+This prompt ensures the model simulates the process of buzzing in progressively, while giving definite, confidence-graded answers at each stage. Want me to adapt this for a specific LLM (like Claude, Gemini, or Mistral)?
